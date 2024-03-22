@@ -31,7 +31,7 @@ async function checkAndUpdate() {
 
             comp = document.querySelector("[class^='TargetProgressSquad-sc']").textContent;
             comp = comp.replace(/,[^]*$/, ''); // Remove trailing comma and decimals
-            comp = comp.replace(/[a-zA-Z, ]/g, ''); // Remove letters and spaces
+            comp = comp.replace(/[a-zA-Z|, ]/g, ''); // Remove letters and spaces
 
             if (comp <= 99) {
               // Squad is less than 100%
